@@ -90,6 +90,65 @@ Return the cell and initial state in the following tuple (Cell, InitialState)
 
 Apply embedding to input_data using TensorFlow. Return the embedded sequence.
 
+### Build RNN
+
+You created a RNN Cell in the get_init_cell() function. Time to use the cell to create a RNN.
+
+- Build the RNN using the tf.nn.dynamic_rnn()
+- Apply the name "final_state" to the final state using tf.identity() 
+
+Return the outputs and final_state state in the following tuple (Outputs, FinalState)
+
+### Build the Neural Network
+
+Apply the functions you implemented above to:
+
+- Apply embedding to input_data using your get_embed(input_data, vocab_size, embed_dim) function.
+- Build RNN using cell and your build_rnn(cell, inputs) function.
+- Apply a fully connected layer with a linear activation and vocab_size as the number of outputs.
+
+Return the logits and final state in the following tuple (Logits, FinalState)
+
+### Batches
+
+Implement get_batches to create batches of input and targets using int_text. The batches should be a Numpy array with the shape (number of batches, 2, batch size, sequence length). Each batch contains two elements:
+
+The first element is a single batch of input with the shape [batch size, sequence length] 
+
+The second element is a single batch of targets with the shape [batch size, sequence length] 
+
+If you can't fill the last batch with enough data, drop the last batch.
+
+For exmple, get_batches([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20], 3, 2) would return a Numpy array of the following:
+
+     [
+       # First Batch
+       [
+         # Batch of Input
+         [[ 1  2], [ 7  8], [13 14]]
+         # Batch of targets
+         [[ 2  3], [ 8  9], [14 15]]
+       ]
+
+       # Second Batch
+       [
+         # Batch of Input
+         [[ 3  4], [ 9 10], [15 16]]
+         # Batch of targets
+         [[ 4  5], [10 11], [16 17]]
+       ]
+
+       # Third Batch
+       [
+          # Batch of Input
+         [[ 5  6], [11 12], [17 18]]
+         # Batch of targets
+         [[ 6  7], [12 13], [18  1]]
+       ]
+     ]
+
+Notice that the last target value in the last batch is the first input value of the first batch. In this case, 1. This is a common technique used when creating sequence batches, although it is rather unintuitive.
+
 
 
 
