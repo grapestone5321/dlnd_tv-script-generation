@@ -53,6 +53,42 @@ Running the code cell below will preprocess all the data and save it to file.
 
 This is your first checkpoint. If you ever decide to come back to this notebook or have to restart the notebook, you can start from here. The preprocessed data has been saved to disk.
 
+## Build the Neural Network
+
+You'll build the components necessary to build a RNN by implementing the following functions below:
+
+- get_inputs
+- get_init_cell
+- get_embed
+- build_rnn
+- build_nn
+- get_batches
+
+Check the Version of TensorFlow and Access to GPU
+
+### Input
+
+Implement the get_inputs() function to create TF Placeholders for the Neural Network. It should create the following placeholders:
+
+- Input text placeholder named "input" using the TF Placeholder name parameter.
+- Targets placeholder
+- Learning Rate placeholder
+
+Return the placeholders in the following tuple (Input, Targets, LearningRate)
+
+## Build RNN Cell and Initialize
+
+Stack one or more BasicLSTMCells in a MultiRNNCell.
+
+- The Rnn size should be set using rnn_size 
+- Initalize Cell State using the MultiRNNCell's zero_state() function
+- Apply the name "initial_state" to the initial state using tf.identity() 
+
+Return the cell and initial state in the following tuple (Cell, InitialState)
+
+### Word Embedding
+
+Apply embedding to input_data using TensorFlow. Return the embedded sequence.
 
 
 
