@@ -109,7 +109,8 @@ Apply the functions you implemented above to:
 
 Return the logits and final state in the following tuple (Logits, FinalState)
 
-### Batches
+Save Parameters
+Save seq_length and save_dir for generating a new TV script.### Batches
 
 Implement get_batches to create batches of input and targets using int_text. The batches should be a Numpy array with the shape (number of batches, 2, batch size, sequence length). Each batch contains two elements:
 
@@ -148,6 +149,36 @@ For exmple, get_batches([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 
      ]
 
 Notice that the last target value in the last batch is the first input value of the first batch. In this case, 1. This is a common technique used when creating sequence batches, although it is rather unintuitive.
+
+## Neural Network Training
+
+### Hyperparameters
+
+Tune the following parameters:
+
+- Set num_epochs to the number of epochs.
+- Set batch_size to the batch size.
+- Set rnn_size to the size of the RNNs.
+- Set embed_dim to the size of the embedding.
+- Set seq_length to the length of sequence.
+- Set learning_rate to the learning rate.
+- Set show_every_n_batches to the number of batches the neural network should print progress.
+
+### Build the Graph
+
+Build the graph using the neural network you implemented.
+
+## Train
+
+Train the neural network on the preprocessed data. If you have a hard time getting a good loss, check the forms to see if anyone is having the same problem.
+
+## Save Parameters
+
+Save seq_length and save_dir for generating a new TV script.
+
+# Checkpoint
+
+
 
 
 
