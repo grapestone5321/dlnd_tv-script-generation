@@ -178,6 +178,18 @@ Save seq_length and save_dir for generating a new TV script.
 
 # Checkpoint
 
+## Implement Generate Functions
+
+### Get Tensors
+
+Get tensors from loaded_graph using the function get_tensor_by_name(). Get the tensors using the following names:
+
+- "input:0"
+- "initial_state:0"
+- "final_state:0"
+- "probs:0"
+
+Return the tensors in the following tuple (InputTensor, InitialStateTensor, FinalStateTensor, ProbsTensor)
 
 
 
