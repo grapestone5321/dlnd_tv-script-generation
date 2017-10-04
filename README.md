@@ -191,6 +191,9 @@ Get tensors from loaded_graph using the function get_tensor_by_name(). Get the t
 
 Return the tensors in the following tuple (InputTensor, InitialStateTensor, FinalStateTensor, ProbsTensor)
 
+### Choose Word
+
+Implement the pick_word() function to select the next word using probabilities.
 
 
 
