@@ -199,6 +199,10 @@ Implement the pick_word() function to select the next word using probabilities.
 
 This will generate the TV script for you. Set gen_length to the length of TV script you want to generate.
 
+# The TV Script is Nonsensical
 
+It's ok if the TV script doesn't make any sense. We trained on less than a megabyte of text. In order to get good results, you'll have to use a smaller vocabulary or get more data. Luckly there's more data! As we mentioned in the begging of this project, this is a subset of another dataset. We didn't have you train on all the data, because that would take too long. However, you are free to train your neural network on all the data. After you complete the project, of course.
 
+# Submitting This Project
 
+When submitting this project, make sure to run all the cells before saving the notebook. Save the notebook file as "dlnd_tv_script_generation.ipynb" and save it as a HTML file under "File" -> "Download as". Include the "helper.py" and "problem_unittests.py" files in your submission.
