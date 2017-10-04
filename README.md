@@ -195,6 +195,9 @@ Return the tensors in the following tuple (InputTensor, InitialStateTensor, Fina
 
 Implement the pick_word() function to select the next word using probabilities.
 
+## Generate TV Script
+
+This will generate the TV script for you. Set gen_length to the length of TV script you want to generate.
 
 
 
